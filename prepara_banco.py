@@ -3,7 +3,7 @@ print('Conectando...')
 conn = MySQLdb.connect(user='root', passwd='root', host='127.0.0.1', port=3306)
 
 # Descomente se quiser desfazer o banco...
-conn.cursor().execute("DROP DATABASE `jogoteca`;")
+conn.cursor().execute("DROP DATABASE if exists `jogoteca`;")
 conn.commit()
 
 criar_tabelas = '''
